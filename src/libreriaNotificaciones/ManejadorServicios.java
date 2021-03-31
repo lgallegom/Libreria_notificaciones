@@ -14,6 +14,10 @@ public class ManejadorServicios {
 	}
 	
 	public ArrayList<ReglaServicioMensajes> recogerServicioMensaje(String servicio){
+	
+	// Se instancian las clases correspondientes a cada tipo de notificacion, pasando por parametro el servicio 
+	//siguiente con el fin de cumplir una cadena de responsabilidades y preguntar a cada servicio si ejecuta la 
+	//peticion o la pasa
 		
 		ReglaServicioMensajes servicioSMSempresarial = new ServicioSMSEmpresarial();
 		ReglaServicioMensajes serviciosms = new ServicioSMS(servicioSMSempresarial);
